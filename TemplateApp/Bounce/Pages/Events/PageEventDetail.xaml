@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="false" 
+	     Title="{Binding Title}"
+	     BackgroundColor="#FFFFFF"
+	     xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:TemplateApp.Controls;assembly=TemplateApp"
+             x:Class="TemplateApp.Pages.Events.PageEventDetail">
+	<ContentPage.Content>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.1*"></ColumnDefinition>
+				<ColumnDefinition Width="0.8*"></ColumnDefinition>
+				<ColumnDefinition Width="0.1*"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			<StackLayout Grid.Column="1" VerticalOptions="Center">
+				<Label x:Name="lblWelcome" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" Text="{Binding Title}"></Label>
+				<Entry x:Name="txtDescription" Placeholder="Description" Text="{Binding Item.Description}"></Entry>
+				<Entry x:Name="txtLocation" Placeholder="Location" Text="{Binding Item.Location}"></Entry>
+				<Label Text="What day is the event?"/>
+				<DatePicker x:Name="dateStartDate" Date="{Binding onFormStartDate}"/>
+				<Label Text="When does it start?"/>
+				<TimePicker x:Name="dateStartTime" Time="{Binding onFormStartTime}"/>
+				<Label Text="Competition Level"/>
+				<Picker x:Name="pickCompetition" SelectedIndex="{Binding LevelsSelectedIndex}">
+					<Picker.Items>
+						<x:String>Professional</x:String>
+						<x:String>Competitive</x:String>
+						<x:String>Recreational</x:String>
+					</Picker.Items>
+				</Picker>
+				<Label Text="Type of Event" />
+				<controls:BindablePicker ItemsSource="{Binding Path=EventTypes}" DisplayMemberPath="Name" SelectedValuePath="Id" SelectedValue="{Binding Path=Item.EventType, Mode=TwoWay}" />
+				<StackLayout VerticalOptions="CenterAndExpand"/>
+				<StackLayout Orientation="Vertical" VerticalOptions="End">
+					<StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+						<Button x:Name="btnLogin" Command="{Binding SaveCommand}"  BackgroundColor="#3A9676" Text="Save" TextColor="#FFFFFF"></Button>
+						<Button x:Name="btnBack" Command="{Binding DeleteCommand}"  BackgroundColor="#3A9676" Text="Delete" TextColor="#FFFFFF"></Button>
+					</StackLayout>
+				</StackLayout>
+			</StackLayout>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

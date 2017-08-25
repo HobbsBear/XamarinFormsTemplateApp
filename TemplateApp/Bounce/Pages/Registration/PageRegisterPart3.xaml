@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="false" Title="Register"
+	     BackgroundColor="#FFFFFF"
+	     xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TemplateApp.Pages.Registration.PageRegisterPart3">
+    <StackLayout VerticalOptions="Center">
+        <Label x:Name="lblBirthdate" Text="Date of Birth"></Label>
+        <DatePicker x:Name="dtpBirthdate" Format="d" BackgroundColor="#e5e5e5"></DatePicker>
+        <Picker x:Name="pickGender" Title="Gender" SelectedIndexChanged="pickGender_SelectedIndexChanged" BackgroundColor="#e5e5e5"></Picker>
+        <Entry x:Name="tbxBio" Placeholder="Bio" BackgroundColor="#e5e5e5"></Entry>
+        <Button x:Name="btnCreateAccount" Clicked="btnCreateAccount_Clicked" BackgroundColor="#3A9676" Text="Create"></Button>
+    </StackLayout>
+</ContentPage>

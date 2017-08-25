@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="false" 
+	     Title="{Binding Title}" 
+	     BackgroundColor="#FFFFFF"
+	     xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TemplateApp.Pages.Login.PageLogin">
+	<ContentPage.Content>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.1*"></ColumnDefinition>
+				<ColumnDefinition Width="0.8*"></ColumnDefinition>
+				<ColumnDefinition Width="0.1*"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			<StackLayout Grid.Column="1" VerticalOptions="Center">
+				<Label x:Name="lblWelcome" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" Text="Login"></Label>
+				<Entry x:Name="txtUsername" Placeholder="Username" Text="{Binding User.Username}"></Entry>
+				<Entry x:Name="txtPassword" Placeholder="Password" IsPassword="true" Text="{Binding User.Password}"></Entry>
+				<!--<Label x:Name="lblPasswordReset" Text="Forgot Password"></Label>-->
+				<Button x:Name="btnLogin" Command="{Binding LoginCommand}"  BackgroundColor="#3A9676" Text="Login" TextColor="#FFFFFF"></Button>
+				<Button x:Name="btnBack" Clicked="btnBack_Click"  BackgroundColor="#3A9676" Text="Back" TextColor="#FFFFFF"></Button>
+			</StackLayout>
+		</Grid>
+		
+	</ContentPage.Content>	
+</ContentPage>

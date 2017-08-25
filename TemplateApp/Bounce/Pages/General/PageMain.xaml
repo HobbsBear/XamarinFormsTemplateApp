@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="false" 
+	     Title="{Binding Title}"
+	     BackgroundColor="#FFFFFF"
+	     xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TemplateApp.Pages.General.PageMain">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="60" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<StackLayout Padding="0, 10, 0, 0" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="60"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="60"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<!--<Button Text="..." Grid.Column="0" Grid.Row="0" TextColor="#FFFFFF"></Button>-->
+				<StackLayout Orientation="Horizontal" Grid.Column="1" Grid.Row="0"  HorizontalOptions="StartAndExpand">
+					<Image WidthRequest="60" HeightRequest="60" Source=""/>
+					<Label Text="{Binding user.Username}" HorizontalOptions="Center" FontSize="24"/>
+				</StackLayout>
+				<!--<Button Text="..." Grid.Column="2" Grid.Row="0" TextColor="#FFFFFF"></Button>-->
+			</Grid>
+		</StackLayout>
+		<StackLayout  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+			<ListView CachingStrategy="RecycleElement"
+                      IsPullToRefreshEnabled="True"
+                      IsRefreshing="{Binding IsBusy,
+                                             Mode=OneWay}"
+                      ItemsSource="{Binding Events}"
+                      RefreshCommand="{Binding RefreshCommand}"
+                      RowHeight="50"
+                      SelectedItem="{Binding SelectedEvent,
+                                             Mode=TwoWay}">
+				<ListView.BackgroundColor>
+					<OnPlatform x:TypeArguments="Color"
+					Android="#F0F0F0"
+					WinPhone="#F0F0F0"
+					iOS="#F0F0F0" />
+				</ListView.BackgroundColor>
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout HorizontalOptions="FillAndExpand"
+                                         Orientation="Horizontal"
+                                         Padding="10"
+                                         VerticalOptions="CenterAndExpand">
+								<StackLayout.BackgroundColor>
+									<OnPlatform x:TypeArguments="Color"
+                                                Android="White"
+                                                WinPhone="White"
+                                                iOS="White" />
+								</StackLayout.BackgroundColor>
+								<Label HorizontalOptions="FillAndExpand"
+                                       Text="{Binding Description}"
+                                       TextColor="#272832">
+									<Label.TextColor>
+										<OnPlatform x:TypeArguments="Color"
+                                                    Android="#272832"
+                                                    WinPhone="#272832"
+                                                    iOS="#272832" />
+									</Label.TextColor>
+								</Label>
+								<Switch IsEnabled="False" IsToggled="{Binding Complete, Mode=OneWay}" />
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+				<Button BackgroundColor="Teal"
+                        Command="{Binding AddNewEventCommand}"
+                        Text="Add New Event"
+                        TextColor="White" />
+				<Button BackgroundColor="Teal"
+                        Command="{Binding RefreshCommand}"
+                        Text="Refresh"
+                        TextColor="White" />
+				<ActivityIndicator HorizontalOptions="End"
+                                   IsRunning="{Binding IsBusy,
+                                                       Mode=OneWay}"
+                                   VerticalOptions="Center"
+                                   Color="Black" />
+			</StackLayout>
+		</StackLayout>
+	</Grid>
+</ContentPage>

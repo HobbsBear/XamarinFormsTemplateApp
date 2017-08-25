@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="false" Title="Register"
+	     BackgroundColor="#FFFFFF"
+	     xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TemplateApp.Pages.Registration.PageRegisterPart2">
+    <StackLayout VerticalOptions="Center">
+        <Entry x:Name="tbxUsername" Placeholder="Username" BackgroundColor="#e5e5e5"></Entry>
+        <Entry x:Name="tbxPassword" Placeholder="Password" BackgroundColor="#e5e5e5" IsPassword="True"></Entry>
+        <Entry x:Name="tbxPasswordConfirm" Placeholder="Confirm Password" BackgroundColor="#e5e5e5" IsPassword="True"></Entry>
+        <Entry x:Name="tbxFirstname" Placeholder="First Name" BackgroundColor="#e5e5e5"></Entry>
+        <Entry x:Name="tbxLastname" Placeholder="Last Name" BackgroundColor="#e5e5e5"></Entry>
+        <Entry x:Name="tbxEmail" Placeholder="Email" BackgroundColor="#e5e5e5" Keyboard="Email"></Entry>
+        <Entry x:Name="tbxEmailConfirm" Placeholder="Confirm Email" BackgroundColor="#e5e5e5" Keyboard="Email"></Entry>
+		<Button x:Name="btnNext" Clicked="btnNext_Clicked" BackgroundColor="#3A9676" Text="Next"></Button>
+	</StackLayout>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="false"
+	     BackgroundColor="#FFFFFF"
+	     xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TemplateApp.Pages.General.PageHome"
+	     Title="{Binding Title}">
+	<ContentPage.Content>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.1*"></ColumnDefinition>
+				<ColumnDefinition Width="0.8*"></ColumnDefinition>
+				<ColumnDefinition Width="0.1*"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			<StackLayout Grid.Column="1" VerticalOptions="Center">
+				<Label x:Name="lblWelcome" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" Text="TemplateApp"></Label>
+				<Label x:Name="lblSubWelcome" FontSize="18" HorizontalOptions="Center" Text="Get playing!"></Label>
+				<Button x:Name="btnLoginHome" Command="{Binding LoginNavCommand}" BackgroundColor="#3A9676" Text="Login" TextColor="#FFFFFF"></Button>
+				<Button x:Name="btnRegister" Command="{Binding RegisterNavCommand}" BackgroundColor="#3A9676" Text="Register" TextColor="#FFFFFF"></Button>
+			</StackLayout>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

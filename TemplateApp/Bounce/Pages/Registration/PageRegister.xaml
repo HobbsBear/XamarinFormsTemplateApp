@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="false" 
+	     Title="{Binding Title}" 
+	     BackgroundColor="#FFFFFF"
+	     xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TemplateApp.Pages.Registration.PageRegister">
+	<ContentPage.Content>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.1*"></ColumnDefinition>
+				<ColumnDefinition Width="0.8*"></ColumnDefinition>
+				<ColumnDefinition Width="0.1*"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			<StackLayout Grid.Column="1" VerticalOptions="Center">
+				<Label x:Name="lblWelcome" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" Text="Register"></Label>
+				<Entry x:Name="txtUsername" Placeholder="Username" Text="{Binding User.Username}"></Entry>
+				<Entry x:Name="txtEmail" Placeholder="Email" Text="{Binding User.EmailAddress}"></Entry>
+				<Entry x:Name="txtFirstName" Placeholder="First Name" Text="{Binding User.FirstName}"></Entry>
+				<Entry x:Name="txtLastName" Placeholder="Last Name" Text="{Binding User.LastName}"></Entry>
+				<Entry x:Name="txtPassword" Placeholder="Password" IsPassword="true" Text="{Binding User.Password}"></Entry>
+				<Entry x:Name="txtPasswordConfirm" Placeholder="Confirm Password" Text="{Binding passwordConfirm}" IsPassword="true"></Entry>
+				<!--<Button x:Name="btnChooseLanguage" Clicked="btnChooseLanguage_Click" BackgroundColor="#3A9676" Text="Choose Language" TextColor="#FFFFFF"></Button>
+				<Button x:Name="btnChooseRegion" Clicked="btnChooseRegion_Click" BackgroundColor="#3A9676" Text="Choose Region" TextColor="#FFFFFF"></Button>
+				<Button x:Name="btnConnectToArea" Clicked="btnConnectToArea_Click" BackgroundColor="#3A9676" Text="Connect to Area" TextColor="#FFFFFF"></Button>-->
+				<Button x:Name="btnNext" Command="{Binding RegisterCommand}" BackgroundColor="#3A9676" Text="Next" TextColor="#FFFFFF"></Button>
+			</StackLayout>
+		</Grid>
+	</ContentPage.Content>
+	
+</ContentPage>
