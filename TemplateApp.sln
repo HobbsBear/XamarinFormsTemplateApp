@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp", "Bounce\Bounce\TemplateApp.csproj", "{E72549BF-4EB0-48DE-A679-2950C548034A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp", "TemplateApp\TemplateApp\TemplateApp.csproj", "{E72549BF-4EB0-48DE-A679-2950C548034A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.Droid", "Bounce\Bounce.Droid\TemplateApp.Droid.csproj", "{52BE3D0B-330A-41FD-A85E-FBC9992A4E4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.Droid", "TemplateApp\TemplateApp.Droid\TemplateApp.Droid.csproj", "{52BE3D0B-330A-41FD-A85E-FBC9992A4E4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.iOS", "Bounce\Bounce.iOS\TemplateApp.iOS.csproj", "{15779BF4-8C20-41D9-A38F-E0243108951F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.iOS", "TemplateApp\TemplateApp.iOS\TemplateApp.iOS.csproj", "{15779BF4-8C20-41D9-A38F-E0243108951F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.UWP", "Bounce\Bounce.UWP\TemplateApp.UWP.csproj", "{E7A76C49-8B4A-4C6E-A5F0-9E5FEC3D5C93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.UWP", "TemplateApp\TemplateApp.UWP\TemplateApp.UWP.csproj", "{E7A76C49-8B4A-4C6E-A5F0-9E5FEC3D5C93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.Windows", "Bounce\Bounce.Windows\TemplateApp.Windows.csproj", "{B40E9A78-FEE8-4CEB-BEAA-778D25079004}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.Windows", "TemplateApp\TemplateApp.Windows\TemplateApp.Windows.csproj", "{B40E9A78-FEE8-4CEB-BEAA-778D25079004}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.Service", "PassTimeSportsService\TemplateApp.Service.csproj", "{48198A3D-4C4D-4BF5-9669-9A0F71D826BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.Service", "TemplateAppService\TemplateApp.Service.csproj", "{48198A3D-4C4D-4BF5-9669-9A0F71D826BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.BusinessLayer", "PassTimeSports.BusinessLayer\TemplateApp.BusinessLayer.csproj", "{D89C38B3-6CC2-4A49-ADAA-3E28BB5C40B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApp.BusinessLayer", "TemplateApp.BusinessLayer\TemplateApp.BusinessLayer.csproj", "{D89C38B3-6CC2-4A49-ADAA-3E28BB5C40B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -432,28 +432,28 @@ Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
 		SccNumberOfProjects = 8
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://bounceapp.visualstudio.com/
-		SccProjectUniqueName0 = Bounce\\Bounce.iOS\\TemplateApp.iOS.csproj
-		SccProjectName0 = Bounce/Bounce.iOS
-		SccLocalPath0 = Bounce\\Bounce.iOS
-		SccProjectUniqueName1 = Bounce\\Bounce.Windows\\TemplateApp.Windows.csproj
-		SccProjectName1 = Bounce/Bounce.Windows
-		SccLocalPath1 = Bounce\\Bounce.Windows
-		SccProjectUniqueName2 = Bounce\\Bounce.UWP\\TemplateApp.UWP.csproj
-		SccProjectName2 = Bounce/Bounce.UWP
-		SccLocalPath2 = Bounce\\Bounce.UWP
-		SccProjectUniqueName3 = PassTimeSportsService\\TemplateApp.Service.csproj
-		SccProjectName3 = PassTimeSportsService
-		SccLocalPath3 = PassTimeSportsService
-		SccProjectUniqueName4 = Bounce\\Bounce.Droid\\TemplateApp.Droid.csproj
-		SccProjectName4 = Bounce/Bounce.Droid
-		SccLocalPath4 = Bounce\\Bounce.Droid
-		SccProjectUniqueName5 = PassTimeSports.BusinessLayer\\TemplateApp.BusinessLayer.csproj
-		SccProjectName5 = PassTimeSports.BusinessLayer
-		SccLocalPath5 = PassTimeSports.BusinessLayer
-		SccProjectUniqueName6 = Bounce\\Bounce\\TemplateApp.csproj
-		SccProjectName6 = Bounce/Bounce
-		SccLocalPath6 = Bounce\\Bounce
+		SccTeamFoundationServer = https://TemplateAppapp.visualstudio.com/
+		SccProjectUniqueName0 = TemplateApp\\TemplateApp.iOS\\TemplateApp.iOS.csproj
+		SccProjectName0 = TemplateApp/TemplateApp.iOS
+		SccLocalPath0 = TemplateApp\\TemplateApp.iOS
+		SccProjectUniqueName1 = TemplateApp\\TemplateApp.Windows\\TemplateApp.Windows.csproj
+		SccProjectName1 = TemplateApp/TemplateApp.Windows
+		SccLocalPath1 = TemplateApp\\TemplateApp.Windows
+		SccProjectUniqueName2 = TemplateApp\\TemplateApp.UWP\\TemplateApp.UWP.csproj
+		SccProjectName2 = TemplateApp/TemplateApp.UWP
+		SccLocalPath2 = TemplateApp\\TemplateApp.UWP
+		SccProjectUniqueName3 = TemplateAppService\\TemplateApp.Service.csproj
+		SccProjectName3 = TemplateAppService
+		SccLocalPath3 = TemplateAppService
+		SccProjectUniqueName4 = TemplateApp\\TemplateApp.Droid\\TemplateApp.Droid.csproj
+		SccProjectName4 = TemplateApp/TemplateApp.Droid
+		SccLocalPath4 = TemplateApp\\TemplateApp.Droid
+		SccProjectUniqueName5 = TemplateApp.BusinessLayer\\TemplateApp.BusinessLayer.csproj
+		SccProjectName5 = TemplateApp.BusinessLayer
+		SccLocalPath5 = TemplateApp.BusinessLayer
+		SccProjectUniqueName6 = TemplateApp\\TemplateApp\\TemplateApp.csproj
+		SccProjectName6 = TemplateApp/TemplateApp
+		SccLocalPath6 = TemplateApp\\TemplateApp
 		SccLocalPath7 = .
 	EndGlobalSection
 EndGlobal
