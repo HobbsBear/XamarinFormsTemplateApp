@@ -1,7 +1,7 @@
 ﻿using Microsoft.Azure.Mobile.Server;
 using System.Collections.Generic;
 
-namespace TemplateAppService.DataObjects
+namespace PassTimeSportsService.DataObjects
 {
 	public class Message : EntityData
 	{

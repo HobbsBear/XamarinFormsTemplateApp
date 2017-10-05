@@ -1,9 +1,9 @@
-﻿using TemplateAppService.Models;
+﻿using PassTimeSportsService.Models;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TemplateAppService.DataObjects
+namespace PassTimeSportsService.DataObjects
 {
 	public class RegisteredEvents
 	{

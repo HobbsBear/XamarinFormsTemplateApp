@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Linq;
 using System;
 
-namespace TemplateAppService.Controllers
+namespace PassTimeSportsService.Controllers
 {
 	[MobileAppController]
 	public class AdditionController : ApiController

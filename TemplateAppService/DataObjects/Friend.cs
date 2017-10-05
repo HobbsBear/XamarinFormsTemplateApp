@@ -1,4 +1,4 @@
-﻿namespace TemplateAppService.DataObjects
+﻿namespace PassTimeSportsService.DataObjects
 {
 	public class Friend
 	{

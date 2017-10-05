@@ -2,12 +2,17 @@
 using Microsoft.Azure.Mobile.Server;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
-using TemplateAppService.Models;
+using PassTimeSportsService.Models;
 
-namespace TemplateAppService.DataObjects
+namespace PassTimeSportsService.DataObjects
 {
 	public class Event : EntityData
 	{
+        public Event()
+        {
+            RegisteredUsers = new List<User>();
+        }
+
 		public string Description { get; set; }
 		public string Location { get; set; }
 		//public int? MaxNumberOfAttendees { get; set; }
@@ -23,7 +28,9 @@ namespace TemplateAppService.DataObjects
 
 		[ForeignKey("HostUserID")]
 		public User HostUser { get; set; }
-	}
+
+        public virtual ICollection<User> RegisteredUsers { get; set; }
+    }
 
 	public class EventType : EntityData
 	{

@@ -3,8 +3,8 @@ using System.IdentityModel.Tokens;
 using System.Linq;
 using System.Security.Claims;
 using System.Web.Http;
-using TemplateAppService.Models;
-using TemplateAppService.DataObjects;
+using PassTimeSportsService.Models;
+using PassTimeSportsService.DataObjects;
 using Microsoft.Azure.Mobile.Server.Login;
 using System.Threading.Tasks;
 using System.Data.Entity.Infrastructure;
@@ -13,7 +13,7 @@ using System.Security.Principal;
 using System.Data.Entity.Migrations;
 using Newtonsoft.Json;
 
-namespace TemplateAppService.Controllers
+namespace PassTimeSportsService.Controllers
 {
 	[Route(".auth/login/custom")]
 	public class CustomAuthController : ApiController

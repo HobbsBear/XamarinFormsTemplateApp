@@ -3,9 +3,9 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using Microsoft.Azure.Mobile.Server;
 using Microsoft.Azure.Mobile.Server.Tables;
-using TemplateAppService.DataObjects;
+using PassTimeSportsService.DataObjects;
 
-namespace TemplateAppService.Models
+namespace PassTimeSportsService.Models
 {
 	public class MobileServiceContext : DbContext
 	{
@@ -33,7 +33,17 @@ namespace TemplateAppService.Models
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
-			modelBuilder.Conventions.Add(
+            modelBuilder.Entity<User>()
+                .HasMany(p => p.RegisteredEvents)
+                .WithMany(r => r.RegisteredUsers)
+                .Map(mc =>
+                {
+                    mc.MapLeftKey("UserID");
+                    mc.MapRightKey("EventID");
+                    mc.ToTable("UserEvents");
+                });
+
+            modelBuilder.Conventions.Add(
 			    new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
 				"ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
 

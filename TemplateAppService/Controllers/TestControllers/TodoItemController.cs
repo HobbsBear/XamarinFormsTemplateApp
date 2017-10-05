@@ -4,11 +4,11 @@ using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.OData;
 using Microsoft.Azure.Mobile.Server;
-using TemplateAppService.DataObjects;
-using TemplateAppService.Models;
+using PassTimeSportsService.DataObjects;
+using PassTimeSportsService.Models;
 using System.Net;
 
-namespace TemplateAppService.Controllers
+namespace PassTimeSportsService.Controllers
 {
 	[Authorize]
 	public class TodoItemController : TableController<TodoItem>

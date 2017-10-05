@@ -1,8 +1,8 @@
-﻿using TemplateAppService.DataObjects;
+﻿using PassTimeSportsService.DataObjects;
 using System.Data.Entity;
 using System.Linq;
 
-namespace TemplateAppService.Extensions
+namespace PassTimeSportsService.Extensions
 {
 	public static class MessageExtensions
 	{

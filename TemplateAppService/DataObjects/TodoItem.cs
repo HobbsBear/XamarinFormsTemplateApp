@@ -1,7 +1,7 @@
 ﻿using Microsoft.Azure.Mobile.Server;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TemplateAppService.DataObjects
+namespace PassTimeSportsService.DataObjects
 {
 	public class TodoItem : EntityData
 	{

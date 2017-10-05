@@ -1,7 +1,7 @@
-﻿using TemplateAppService.DataObjects;
+﻿using PassTimeSportsService.DataObjects;
 using System.Linq;
 
-namespace TemplateAppService.Extensions
+namespace PassTimeSportsService.Extensions
 {
 	public static class TodoItemExtensions
 	{

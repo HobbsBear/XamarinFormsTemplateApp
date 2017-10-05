@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 using Microsoft.Azure.Mobile.Server.Config;
-using TemplateAppService.Models;
+using PassTimeSportsService.Models;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Migrations;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System;
 using System.Net.Http;
 using System.Linq;
 
-namespace TemplateAppService.Controllers
+namespace PassTimeSportsService.Controllers
 {
     [MobileAppController]
     public class ConfigController : ApiController

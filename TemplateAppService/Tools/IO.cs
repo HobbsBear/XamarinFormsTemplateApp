@@ -3,7 +3,7 @@ using System.Net;
 using System.Net.Http;
 using System.Linq;
 
-namespace TemplateAppService.Tools
+namespace PassTimeSportsService.Tools
 {
 	public class IO
 	{

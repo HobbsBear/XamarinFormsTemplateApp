@@ -4,13 +4,13 @@ using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.OData;
 using Microsoft.Azure.Mobile.Server;
-using TemplateAppService.DataObjects;
-using TemplateAppService.Models;
+using PassTimeSportsService.DataObjects;
+using PassTimeSportsService.Models;
 using System.Security.Claims;
-using TemplateAppService.Extensions;
+using PassTimeSportsService.Extensions;
 using System.Collections.Generic;
 
-namespace TemplateAppService.Controllers
+namespace PassTimeSportsService.Controllers
 {
 	public class MessageController : TableController<Message>
 	{
